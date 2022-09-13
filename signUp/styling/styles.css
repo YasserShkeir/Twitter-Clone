@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  background-color: #000;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100%;
+}
+
+#left {
+  height: 95%;
+  width: 55%;
+  min-height: 750px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  background-image: url("../images/lohp_en_1302x955.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#left img {
+  inset: 0px;
+  opacity: 0;
+  position: absolute;
+  width: fit-content;
+  z-index: -1;
+}
+
+#left svg {
+  width: 375px;
+  fill: white;
+}
+
+#right {
+  height: 95%;
+  width: 45%;
+  min-height: 750px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  color: white;
+}
+
+#right-logo {
+  margin: 20% 0% 10% 5%;
+}
+
+#right svg {
+  width: 50px;
+  fill: white;
+}
