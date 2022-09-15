@@ -42,26 +42,40 @@
         </div>
         <h3>Happening now</h3>
         <h4>Join Twitter today.</h4>
+
+        <!-- signup Pop up Start -->
+        <!-- Trigger/Open The Modal -->
         <button id="signup" class="myBtn" onclick="">
           Sign up with phone or email
         </button>
-        <!-- signup Pop up Start -->
-        <h2>Modal Example</h2>
-
-        <!-- Trigger/Open The Modal -->
-        <button id="myBtn">Open Modal</button>
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
           <!-- Modal content -->
           <div class="modal-content">
             <span class="close">&times;</span>
-            <form>
-              <input id="username" type="text" placeholder="username..." />
-              <input id="password" type="password" placeholder="password..." />
-              <input id="email" type="email" placeholder="email..." />
-              <input id="phone" type="tel" placeholder="phone..." />
-              <input id="dob" type="date" placeholder="date of birth..." />
+            <h1>Create your account</h1>
+            <form id="signupInput">
+              <div id="usernameField" class="signupField">
+                <input id="username" type="text" />
+                <label id="usernameLabel">Username</label>
+              </div>
+              <div class="signupField">
+                <input id="password" type="password" />
+                <label>Password</label>
+              </div>
+              <div class="signupField">
+                <input id="email" type="email" />
+                <label>Email</label>
+              </div>
+              <div class="signupField">
+                <input id="phone" type="tel" />
+                <label>Phone</label>
+              </div>
+              <div class="signupField">
+                <input id="dob" type="date" />
+                <label>Date of Birth</label>
+              </div>
               <input id="submit" type="submit" value="Submit" />
             </form>
           </div>
