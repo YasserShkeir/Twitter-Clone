@@ -26,6 +26,9 @@
     
     $response["status"] = "sucesss";
     echo json_encode($response);
-    
+
+    $stmt -> close();
+    $mysqli -> close();
+
 ?>
     
