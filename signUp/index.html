@@ -57,23 +57,23 @@
             <h1>Create your account</h1>
             <form id="signupInput">
               <div id="usernameField" class="signupField">
-                <input id="username" type="text" />
+                <input id="username" type="text" name="username" />
                 <label id="usernameLabel">Username</label>
               </div>
               <div class="signupField">
-                <input id="password" type="password" />
+                <input id="password" type="password" name="password" />
                 <label>Password</label>
               </div>
               <div class="signupField">
-                <input id="email" type="email" />
+                <input id="email" type="email" name="email" />
                 <label>Email</label>
               </div>
               <div class="signupField">
-                <input id="phone" type="tel" />
+                <input id="phone" type="tel" name="phone" />
                 <label>Phone</label>
               </div>
               <div class="signupField">
-                <input id="dob" type="date" />
+                <input id="dob" type="date" name="dob" />
                 <label>Date of Birth</label>
               </div>
               <input id="submit" type="submit" value="Submit" />
@@ -88,7 +88,8 @@
           <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>,
           including <a href="#">Cookie Use</a>.
         </div>
-        <h5>Already have an account?</h5>
+        <p id="ask" class="font-500">Already have an account?</p>
+        <button id="signup" class="myBtn" onclick="">Sign in</button>
       </div>
       <!-- Right Section End -->
     </div>
