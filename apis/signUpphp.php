@@ -23,6 +23,9 @@
                                     VALUES ( ?, NULL, NULL, ?, NULL, NULL, current_timestamp(), NULL, NULL, NULL, NULL, NULL, NULL)");
     $stmt -> bind_param("ss", $username, $password );
     $stmt -> execute();
-
+    
+    $response["status"] = "sucesss";
+    echo json_encode($response);
+    
 ?>
     
