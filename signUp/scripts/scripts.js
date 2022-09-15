@@ -18,9 +18,26 @@ window.onload = function () {
     modal.style.display = "none";
   };
 
-  var username = document.getElementById("username");
-  var password = document.getElementById("password");
-  var email = document.getElementById("email");
-  var phone = document.getElementById("phone");
-  var dob = document.getElementById("dob");
+  let username = document.getElementById("username");
+  let password = document.getElementById("password");
+  let email = document.getElementById("email");
+  let phone = document.getElementById("phone");
+  let dob = document.getElementById("dob");
+
+  let data = {
+    username: username,
+    password: password,
+    email: email,
+    phone: phone,
+    dob: dob,
+  };
+
+  fetch("", {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: { "Content-type": "application/json; charset=UTF-8" },
+  })
+    .then((response) => response.json())
+    .then((json) => console.log(json))
+    .catch((err) => console.log(err));
 };
