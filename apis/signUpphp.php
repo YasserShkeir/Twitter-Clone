@@ -21,7 +21,8 @@
 
     $stmt = $mysqli -> prepare ("INSERT INTO `users` ( `username`, `first_name`, `last_name`, `password`, `email`, `phone_number`, `created_at`, `updated_at`, `DOB`, `gender`, `location`, `last_login`, `verified`)
                                     VALUES ( ?, NULL, NULL, ?, NULL, NULL, current_timestamp(), NULL, NULL, NULL, NULL, NULL, NULL)");
-    
+    $stmt -> bind_param("ss", $username, $password );
+    $stmt -> execute();
 
 ?>
     
