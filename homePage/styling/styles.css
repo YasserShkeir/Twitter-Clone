@@ -1,5 +1,4 @@
 * {
-  /* border: 1px solid black; */
   font-family: sans-serif;
 }
 
@@ -71,10 +70,11 @@ body {
   border-radius: 45px;
   background-color: transparent;
   border: none;
+  background-color: #71767b;
 }
 
 .nav-menu-item:hover {
-  background-color: #71767b;
+  background-color: #1d9bf0;
 }
 
 .nav-menu-container {
@@ -87,7 +87,6 @@ body {
 }
 
 .nav-menu-item img {
-  background-color: red;
   height: 30px;
   width: 30px;
 }
@@ -112,7 +111,7 @@ body {
   font-size: 18px;
   padding: 0px 10px;
   align-items: center;
-  background-color: rgb(0, 0, 0, 1);
+  background-color: rgb(0, 0, 0, 0.8);
   color: #fff;
   position: fixed;
   height: 72px;
@@ -121,11 +120,11 @@ body {
 }
 
 #feed-header p {
-  font-size: 20px;
+  font-size: 3vw;
 }
 
 #feed-header svg {
-  height: 28px;
+  height: 3vw;
 }
 
 #add-tweet {
@@ -171,22 +170,52 @@ body {
   box-sizing: border-box;
 }
 
+.tweet-info {
+  display: flex;
+  align-items: center;
+  color: #71767b;
+  font-size: 14px;
+  gap: 5px;
+}
+
+.tweet-info img {
+  background-color: #71767b;
+  height: 24px;
+  border-radius: 20px;
+}
+
 .tweet .user-card {
   padding: 0% 5%;
   box-sizing: border-box;
 }
 
 .tweet-content-text {
-  margin: 5px 25px;
+  margin: 5px 5%;
 }
 
 .tweet-content-media {
   width: 100%;
   display: flex;
+  justify-content: center;
 }
 
 .tweet-content-media img {
   width: 100%;
+  max-width: 400px;
+}
+
+.tweet-footer {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.footer-like {
+  display: flex;
+}
+
+.footer-share {
+  display: flex;
 }
 
 /* Feed Section End */
@@ -405,6 +434,57 @@ body {
     .user-card {
       min-width: fit-content;
       justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    #left-section {
+      min-width: 80px;
+      width: 5%;
+    }
+
+    #feed {
+      width: 90vw;
+    }
+
+    #feed-header {
+      width: 85%;
+    }
+
+    #feed-header p {
+      font-size: 6vw;
+    }
+
+    #feed-header svg {
+      height: 6vw;
+    }
+
+    #right-section {
+      min-width: auto;
+      width: 2px;
+    }
+
+    #right-col {
+      display: none;
+    }
+
+    .line-vert {
+      display: fixed;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    #feed {
+      width: 100%;
+    }
+
+    #feed-header {
+      width: 100%;
+    }
+
+    #left-section {
+      width: 0px;
+      display: none !important;
     }
   }
 }
