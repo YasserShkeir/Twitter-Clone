@@ -36,11 +36,11 @@
     </section>
 
     <section id="feed">
+      <div id="feed-header">
+        <p>Home</p>
+        <img src="" />
+      </div>
       <div id="add-tweet">
-        <div id="add-tweet-header">
-          <p>Home</p>
-          <img src="" />
-        </div>
         <div id="add-tweet-input">
           <img />
           <p></p>
@@ -58,6 +58,19 @@
 
     <section id="right-section">
       <div class="line-vert"></div>
+      <div id="right-col">
+        <div id="right-search">
+          <input
+            type="search"
+            placeholder="Search Twitter"
+            name="search"
+            onclick="searchInput()"
+          />
+        </div>
+        <div id="right-follow">
+          <div class="user-card"></div>
+        </div>
+      </div>
     </section>
   </body>
 </html>
