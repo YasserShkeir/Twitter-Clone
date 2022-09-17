@@ -99,7 +99,8 @@ body {
 
 /* Feed Section Start */
 
-#feed {
+#feed,
+#editProf {
   width: 39%;
   height: 100vh;
   background-color: #000;
@@ -234,6 +235,7 @@ body {
 #right-col {
   display: flex;
   flex-direction: column;
+  position: fixed;
   gap: 15px;
   box-sizing: border-box;
   height: 100%;
@@ -305,6 +307,57 @@ body {
 
 /* Right Side Section End */
 
+/* Edit Profile Section Start */
+
+#prof-Top-Section {
+  width: 100%;
+  height: 510px;
+  background-color: red;
+  margin-top: 75px;
+}
+
+#prof-details {
+  width: 100%;
+  height: 250px;
+  background-color: #1d9bf0;
+}
+
+#prof-media {
+  display: flex;
+  background-color: #71767b;
+  height: 180px;
+  justify-content: center;
+}
+
+#prof-media img {
+  height: 100%;
+}
+
+#prof-media-edit {
+  display: flex;
+  position: absolute;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 0px 4%;
+  height: 130px;
+  margin-top: 110px;
+  width: 39%;
+}
+
+#prof-media-edit img {
+  border-radius: 90px;
+  border: 5px solid #000;
+}
+
+#setup-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 85%;
+}
+
+/* Edit Profile Section End */
+
 /* Utilities */
 .line-vert {
   height: 100vh;
@@ -320,6 +373,22 @@ body {
   background: #71767b;
 }
 
+.btn {
+  cursor: pointer;
+  min-height: 34px;
+  min-width: 70px;
+  border-radius: 25px;
+  padding: 1px 5px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.btn-hollow {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
 .flw-btn {
   background-color: #fff;
   cursor: pointer;
@@ -329,7 +398,7 @@ body {
   padding: 1px;
   font-size: 13px;
   font-weight: 700;
-  color: white;
+  color: #71767b;
   border: none;
 }
 
@@ -353,14 +422,15 @@ body {
   padding-right: 10px;
   box-sizing: border-box;
   display: flex;
+
   align-items: center;
 }
 
 #user-card-pfp {
-  background-color: red;
-  height: 100%;
+  height: 50px;
   width: 50px;
-  border-radius: 50%;
+  border-radius: 100%;
+  border: 2px solid #1d9bf0;
 }
 
 #user-card-details {
@@ -394,7 +464,8 @@ body {
     }
 
     #feed,
-    #feed-header {
+    #feed-header,
+    #editProf {
       width: 42%;
     }
 
@@ -443,7 +514,9 @@ body {
       width: 5%;
     }
 
-    #feed {
+    #feed,
+    #editProf,
+    #prof-media-edit {
       width: 90vw;
     }
 
@@ -474,7 +547,9 @@ body {
   }
 
   @media only screen and (max-width: 500px) {
-    #feed {
+    #feed,
+    #editProf,
+    #prof-media-edit {
       width: 100%;
     }
 
