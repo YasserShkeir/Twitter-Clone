@@ -10,9 +10,9 @@
 
   <body>
     <section id="left-section" class="flex">
-      <div id="left-menu" class="flex">
-        <div id="left-nav" class="flex">
-          <div id="nav-menu" class="flex">
+      <div id="left-menu" class="flex flex-col">
+        <div id="left-nav" class="flex flex-col">
+          <div id="nav-menu" class="flex flex-col">
             <a id="twitter-icon" href="/homePage/#">
               <img src="./assets/icons/twitter-icon-white.png" />
             </a>
@@ -96,13 +96,13 @@
                 src="./assets/icons/default_profile_400x400.png"
                 alt="Profile Cover Image"
               />
-              <div id="setup-btn" class="flex">
+              <div id="setup-btn" class="flex flex-col">
                 <button class="btn btn-hollow">Set up profile</button>
               </div>
             </div>
           </div>
         </div>
-        <div id="prof-details-txt" class="flex">
+        <div id="prof-details-txt" class="flex flex-col">
           <div id="prof-details-fname">y y</div>
           <div id="prof-details-uname">@yy48746175</div>
           <div id="prof-details-date">
@@ -143,11 +143,11 @@
       <div id="profile-feed"></div>
     </section>
 
-    <section id="right-section">
+    <section id="right-section" class="flex">
       <div class="line-vert"></div>
-      <div id="right-col">
+      <div id="right-col" class="flex flex-col">
         <div id="right-search">
-          <div id="right-search-input">
+          <div id="right-search-input" class="flex">
             <svg
               width="20"
               height="20"
@@ -178,9 +178,9 @@
             />
           </div>
         </div>
-        <div id="right-follow">
+        <div id="right-follow" class="flex flex-col">
           <p>Who to follow</p>
-          <div id="right-follow-sugg">
+          <div id="right-follow-sugg" class="flex flex-col">
             <div class="user-card">
               <img id="user-card-pfp" />
               <div id="user-card-details">
