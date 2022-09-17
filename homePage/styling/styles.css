@@ -3,6 +3,10 @@
   font-family: sans-serif;
 }
 
+html {
+  background-color: #000;
+}
+
 body {
   margin: 0px;
   display: flex;
@@ -154,6 +158,37 @@ body {
   background: transparent;
 }
 
+.tweet {
+  height: fit-content;
+  box-sizing: border-box;
+  padding: 25px 0px 10px 0px;
+  gap: 10px;
+  color: #fff;
+}
+
+.tweet .tweet-info {
+  padding-left: 12%;
+  box-sizing: border-box;
+}
+
+.tweet .user-card {
+  padding: 0% 5%;
+  box-sizing: border-box;
+}
+
+.tweet-content-text {
+  margin: 5px 25px;
+}
+
+.tweet-content-media {
+  width: 100%;
+  display: flex;
+}
+
+.tweet-content-media img {
+  width: 100%;
+}
+
 /* Feed Section End */
 
 /* Right Side Section Start */
@@ -175,6 +210,7 @@ body {
   height: 100%;
   width: fit-content;
   align-content: center;
+  padding-left: 15px;
 }
 
 #right-search {
@@ -236,7 +272,6 @@ body {
 
 #right-follow .user-card {
   width: 100%;
-  background: white;
 }
 
 /* Right Side Section End */
@@ -244,6 +279,8 @@ body {
 /* Utilities */
 .line-vert {
   height: 100vh;
+  z-index: 10px;
+  position: fixed;
   width: 2px;
   background: #71767b;
 }
@@ -252,6 +289,19 @@ body {
   width: 100%;
   height: 2px;
   background: #71767b;
+}
+
+.flw-btn {
+  background-color: #fff;
+  cursor: pointer;
+  min-height: 34px;
+  min-width: 70px;
+  border-radius: 25px;
+  padding: 1px;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+  border: none;
 }
 
 .blue-btn {
@@ -338,7 +388,9 @@ body {
       min-width: fit-content;
     }
 
-    .nav-menu-container p {
+    .nav-menu-container p,
+    #left-section #user-card-menu,
+    #left-section #user-card-details {
       display: none;
     }
 
@@ -353,10 +405,6 @@ body {
     .user-card {
       min-width: fit-content;
       justify-content: center;
-    }
-
-    #user-card-details {
-      display: none;
     }
   }
 }
