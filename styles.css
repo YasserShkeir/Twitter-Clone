@@ -80,11 +80,32 @@ body {
   height: 100%;
 }
 
+#add-tweet {
+  display: flex;
+  flex-direction: column;
+  min-height: 180px;
+  padding: 15px 0px 0px 15px;
+}
+
+#add-tweet-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  padding-right: 10px;
+  align-items: center;
+}
+
+#add-tweet-header img {
+  height: 28px;
+}
+
 /* Feed Section End */
 
 /* Right Side Section Start */
 
 #right-section {
+  display: flex;
+  height: 100vh;
   width: 34%;
   height: 100%;
 }
@@ -131,7 +152,7 @@ body {
 }
 
 @media screen {
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
     #left-menu {
       padding: 10px 10px;
       min-width: fit-content;
