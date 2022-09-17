@@ -129,3 +129,43 @@ body {
   width: 50px;
   border-radius: 50%;
 }
+
+@media screen {
+  @media screen and (max-width: 1000px) {
+    #left-menu {
+      padding: 10px 10px;
+      min-width: fit-content;
+    }
+
+    #left-nav {
+      align-items: flex-end;
+      min-width: fit-content;
+    }
+
+    #nav-menu {
+      align-items: flex-end;
+      min-width: fit-content;
+    }
+
+    .nav-menu-container p {
+      display: none;
+    }
+
+    #nav-button {
+      width: fit-content;
+    }
+
+    .nav-menu-container {
+      margin: 0px;
+    }
+
+    .user-card {
+      min-width: fit-content;
+      justify-content: flex-end;
+    }
+
+    #user-card-details {
+      display: none;
+    }
+  }
+}
