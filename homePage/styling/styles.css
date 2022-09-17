@@ -549,6 +549,7 @@ body {
     .user-card {
       min-width: fit-content;
       justify-content: center;
+      padding-right: 0px;
     }
   }
 
@@ -556,6 +557,10 @@ body {
     #left-section {
       min-width: 80px;
       width: 5%;
+    }
+
+    #nav-menu {
+      align-items: center;
     }
 
     #feed,
