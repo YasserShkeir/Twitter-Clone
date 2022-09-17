@@ -15,7 +15,6 @@ body {
 /* Left Side Section Start */
 
 #left-section {
-  display: flex;
   width: 27%;
   height: 100vh;
   justify-content: flex-end;
@@ -24,7 +23,6 @@ body {
 
 #left-menu {
   box-sizing: border-box;
-  display: flex;
   flex-direction: column;
   height: 100%;
   position: fixed;
@@ -32,13 +30,11 @@ body {
 }
 
 #left-nav {
-  display: flex;
   flex-direction: column;
   height: 100%;
 }
 
 #nav-menu {
-  display: flex;
   flex-direction: column;
   gap: 30px;
   height: 100%;
@@ -82,7 +78,6 @@ body {
   height: 32px;
   align-items: center;
   margin-right: 10px;
-  display: flex;
   gap: 17px;
 }
 
@@ -107,7 +102,6 @@ body {
 }
 
 #feed-header {
-  display: flex;
   justify-content: space-between;
   font-size: 18px;
   padding: 0px 10px;
@@ -129,7 +123,6 @@ body {
 }
 
 #add-tweet {
-  display: flex;
   flex-direction: column;
   min-height: fit-content;
   margin-top: 85px;
@@ -138,7 +131,6 @@ body {
 }
 
 #add-tweet-input {
-  display: flex;
   gap: 10px;
   padding: 0px 10px;
 }
@@ -149,7 +141,6 @@ body {
 }
 
 #add-tweet-footer {
-  display: flex;
   justify-content: space-around;
 }
 
@@ -172,7 +163,6 @@ body {
 }
 
 .tweet-info {
-  display: flex;
   align-items: center;
   color: #71767b;
   font-size: 14px;
@@ -196,7 +186,6 @@ body {
 
 .tweet-content-media {
   width: 100%;
-  display: flex;
   justify-content: center;
 }
 
@@ -206,17 +195,14 @@ body {
 }
 
 .tweet-footer {
-  display: flex;
   justify-content: space-around;
   margin: 10px;
 }
 
 .footer-like {
-  display: flex;
 }
 
 .footer-share {
-  display: flex;
 }
 
 /* Feed Section End */
@@ -224,7 +210,6 @@ body {
 /* Right Side Section Start */
 
 #right-section {
-  display: flex;
   gap: 20px;
   min-height: 100vh;
   min-width: 34%;
@@ -233,7 +218,6 @@ body {
 }
 
 #right-col {
-  display: flex;
   flex-direction: column;
   position: fixed;
   gap: 15px;
@@ -255,7 +239,6 @@ body {
 }
 
 #right-search-input {
-  display: flex;
   background-color: #191b1f;
   color: #71767b;
   border-radius: 25px;
@@ -275,7 +258,6 @@ body {
 }
 
 #right-follow {
-  display: flex;
   flex-direction: column;
   text-align: left;
   margin: 70px 0px 0px 0px;
@@ -296,7 +278,6 @@ body {
 }
 
 #right-follow-sugg {
-  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -321,7 +302,6 @@ body {
 }
 
 #prof-media {
-  display: flex;
   background-color: #71767b;
   height: 180px;
   justify-content: center;
@@ -332,7 +312,6 @@ body {
 }
 
 #prof-media-edit {
-  display: flex;
   position: absolute;
   box-sizing: border-box;
   justify-content: space-between;
@@ -348,7 +327,6 @@ body {
 }
 
 #setup-btn {
-  display: flex;
   flex-direction: column;
   justify-content: flex-end;
   height: 85%;
@@ -357,7 +335,6 @@ body {
 #prof-details-txt {
   color: #71767b;
   margin: 10px 10px 20px 5%;
-  display: flex;
   flex-direction: column;
   gap: 5px;
   font-size: 16px;
@@ -381,14 +358,12 @@ body {
 #profile-nav {
   width: 100%;
   height: 50px;
-  display: flex;
   justify-content: center;
 }
 
 #prof-nav-buttons {
   height: 45px;
   width: 85%;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -403,6 +378,10 @@ body {
 /* Edit Profile Section End */
 
 /* Utilities */
+.flex {
+  display: flex;
+}
+
 .line-vert {
   height: 100vh;
   z-index: 10px;

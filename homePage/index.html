@@ -9,16 +9,16 @@
   </head>
 
   <body>
-    <section id="left-section">
-      <div id="left-menu">
-        <div id="left-nav">
-          <div id="nav-menu">
-            <a id="twitter-icon" href="/homePage/#"
-              ><img src="./assets/icons/twitter-icon-white.png"
-            /></a>
+    <section id="left-section" class="flex">
+      <div id="left-menu" class="flex">
+        <div id="left-nav" class="flex">
+          <div id="nav-menu" class="flex">
+            <a id="twitter-icon" href="/homePage/#">
+              <img src="./assets/icons/twitter-icon-white.png" />
+            </a>
             <a href="/homePage/#">
               <button class="nav-menu-item">
-                <div id="nav-home" class="nav-menu-container">
+                <div id="nav-home" class="nav-menu-container flex">
                   <img
                     src="./assets/icons/165_Birdhouse_Tweet_Twitter-512.webp"
                   />
@@ -28,7 +28,7 @@
             </a>
             <a href="/homePage/editProfile.html">
               <button class="nav-menu-item">
-                <div id="nav-profile" class="nav-menu-container">
+                <div id="nav-profile" class="nav-menu-container flex">
                   <img
                     src="./assets/icons/5690239_avatar-profile-white-icon-png-transparent-png.png"
                   />
@@ -67,7 +67,7 @@
     </section>
 
     <section id="feed">
-      <div id="feed-header">
+      <div id="feed-header" class="flex">
         <p>Home</p>
         <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_136_904)">
@@ -83,12 +83,12 @@
           </defs>
         </svg>
       </div>
-      <div id="add-tweet">
-        <div id="add-tweet-input">
+      <div id="add-tweet" class="flex">
+        <div id="add-tweet-input" class="flex">
           <img src="./assets/icons/default_profile_400x400.png" />
           <p></p>
         </div>
-        <div id="add-tweet-footer">
+        <div id="add-tweet-footer" class="flex">
           <div id="add-tweet-misc">
             <button id="add-tweet-img" class="add-tweet-misc-btns">
               <svg
@@ -139,7 +139,7 @@
       <div class="line-hori"></div>
       <!-- Tweet Start -->
       <div class="tweet">
-        <div class="tweet-info">
+        <div class="tweet-info flex">
           <img
             src="./assets/icons/5690239_avatar-profile-white-icon-png-transparent-png.png"
           />
@@ -168,16 +168,16 @@
         </div>
         <div class="tweet-content">
           <div class="tweet-content-text">Test Test</div>
-          <div class="tweet-content-media">
+          <div class="tweet-content-media flex">
             <img src="./assets/icons/default_profile_400x400.png" />
           </div>
         </div>
-        <div class="tweet-footer">
+        <div class="tweet-footer flex">
           <div class="footer-like">
             <img />
             <div id="like-count">12</div>
           </div>
-          <div class="footer-share">
+          <div class="footer-share flex">
             <img />
             Share
           </div>
@@ -186,7 +186,7 @@
       </div>
 
       <div class="tweet">
-        <div class="tweet-info">
+        <div class="tweet-info flex">
           <img
             src="./assets/icons/5690239_avatar-profile-white-icon-png-transparent-png.png"
           />
@@ -215,16 +215,16 @@
         </div>
         <div class="tweet-content">
           <div class="tweet-content-text">Test Test</div>
-          <div class="tweet-content-media">
+          <div class="tweet-content-media flex">
             <img src="" />
           </div>
         </div>
-        <div class="tweet-footer">
-          <div class="footer-like">
+        <div class="tweet-footer flex">
+          <div class="footer-like flex">
             <img />
             <div id="like-count">12</div>
           </div>
-          <div class="footer-share">
+          <div class="footer-share flex">
             <img />
             Share
           </div>
@@ -233,11 +233,11 @@
       </div>
     </section>
 
-    <section id="right-section">
+    <section id="right-section" class="flex">
       <div class="line-vert"></div>
-      <div id="right-col">
+      <div id="right-col" class="flex">
         <div id="right-search">
-          <div id="right-search-input">
+          <div id="right-search-input" class="flex">
             <svg
               width="20"
               height="20"
@@ -268,9 +268,9 @@
             />
           </div>
         </div>
-        <div id="right-follow">
+        <div id="right-follow" class="flex">
           <p>Who to follow</p>
-          <div id="right-follow-sugg">
+          <div id="right-follow-sugg" class="flex">
             <div class="user-card">
               <img id="user-card-pfp" />
               <div id="user-card-details">
