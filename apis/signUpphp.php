@@ -2,33 +2,24 @@
 
     header("Access-Control-Allow-Origin:*");
     header("Access-Control-Allow-Headers: *");
-    include("connection.php");
 
+    include ("connection.php");
 
-    if(isset($_GET["username"]))
-    {
-        $username = $_GET["username"];
-    }
-    else {
-        die("username is missing");
-    }
-    if(isset($_GET["password"])){
-        $password = $_GET["password"];
-    }
-    else {
-        die("username is missing");
-    }
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $email = $_POST['email'];
+    // $dob = date('y-m-d', strtotime($_POST['dob']));
 
-    $stmt = $mysqli -> prepare ("INSERT INTO `users` ( `username`, `first_name`, `last_name`, `password`, `email`, `phone_number`, `created_at`, `updated_at`, `DOB`, `gender`, `location`, `last_login`, `verified`)
-                                    VALUES ( ?, NULL, NULL, ?, NULL, NULL, current_timestamp(), NULL, NULL, NULL, NULL, NULL, NULL)");
-    $stmt -> bind_param("ss", $username, $password );
+    $stmt = $mysqli -> prepare ("INSERT INTO `users` (`username`, `password`, `email`) 
+    VALUES ( ?, ?, ?);");
+    $stmt -> bind_param("sss",$username, $password, $email);
     $stmt -> execute();
-    
-    $response["status"] = "sucesss";
-    echo json_encode($response);
-
     $stmt -> close();
     $mysqli -> close();
+
+
+    $response["status"] = "sucesss";
+    echo json_encode($response);
 
 ?>
     
