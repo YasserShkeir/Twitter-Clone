@@ -312,14 +312,12 @@ body {
 #prof-Top-Section {
   width: 100%;
   height: 510px;
-  background-color: red;
   margin-top: 75px;
 }
 
 #prof-details {
   width: 100%;
   height: 250px;
-  background-color: #1d9bf0;
 }
 
 #prof-media {
@@ -354,6 +352,52 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   height: 85%;
+}
+
+#prof-details-txt {
+  color: #71767b;
+  margin: 10px 10px 20px 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 16px;
+}
+
+#prof-details-fname {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+#prof-details-date {
+  margin: 10px 0px;
+}
+
+#following-count,
+#follower-count {
+  color: #fff;
+}
+
+#profile-nav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#prof-nav-buttons {
+  height: 45px;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prof-nav-btn {
+  cursor: pointer;
+  text-align: center;
+  color: #71767b;
+  width: 70px;
 }
 
 /* Edit Profile Section End */
