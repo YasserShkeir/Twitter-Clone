@@ -3,7 +3,8 @@
 <html>
   <head>
     <title>Home Page</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styling/styles.css" />
+    <script src="./scripts/index.js"></script>
   </head>
 
   <body>
@@ -13,13 +14,13 @@
           <div id="nav-menu">
             <a id="twitter-icon"><img /></a>
             <button class="nav-menu-item">
-              <div class="nav-menu-container">
+              <div id="nav-home" class="nav-menu-container">
                 <img />
                 <p>Home</p>
               </div>
             </button>
             <button class="nav-menu-item">
-              <div class="nav-menu-container">
+              <div id="nav-profile" class="nav-menu-container">
                 <img />
                 <p>Profile Test</p>
               </div>
@@ -68,7 +69,10 @@
           />
         </div>
         <div id="right-follow">
-          <div class="user-card"></div>
+          <p>Who to follow</p>
+          <div id="right-follow-sugg">
+            <div class="user-card"></div>
+          </div>
         </div>
       </div>
     </section>
