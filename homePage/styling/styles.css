@@ -16,6 +16,7 @@ body {
   width: 27%;
   height: 100vh;
   justify-content: flex-end;
+  background-color: #000;
 }
 
 #left-menu {
@@ -41,16 +42,35 @@ body {
   min-width: 240px;
 }
 
+#nav-menu a {
+  width: fit-content;
+  cursor: pointer;
+}
+
+#twitter-icon {
+  height: 60px;
+}
+
+#twitter-icon img {
+  height: 50px;
+  background-color: none;
+}
+
 .nav-menu-item {
   cursor: pointer;
-
   font-size: 18px;
   font-weight: 500;
-
+  color: #fff;
   width: fit-content;
   box-sizing: border-box;
   padding: 12px;
   border-radius: 45px;
+  background-color: transparent;
+  border: none;
+}
+
+.nav-menu-item:hover {
+  background-color: #71767b;
 }
 
 .nav-menu-container {
@@ -78,27 +98,29 @@ body {
 
 #feed {
   width: 39%;
-  height: 100%;
+  height: 100vh;
+  background-color: #000;
 }
 
 #feed-header {
   display: flex;
   justify-content: space-between;
   font-size: 18px;
-  padding-left: 10px;
+  padding: 0px 10px;
   align-items: center;
   background-color: rgb(0, 0, 0, 1);
   color: #fff;
   position: fixed;
   height: 72px;
-  width: 100%;
+  width: 39%;
+  box-sizing: border-box;
 }
 
 #feed-header p {
   font-size: 20px;
 }
 
-#feed-header img {
+#feed-header svg {
   height: 28px;
 }
 
@@ -106,7 +128,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: fit-content;
-  margin-top: 72px;
+  margin-top: 85px;
+  margin-bottom: 10px;
+  gap: 10px;
 }
 
 #add-tweet-input {
@@ -115,9 +139,19 @@ body {
   padding: 0px 10px;
 }
 
+#add-tweet-input img {
+  width: 50px;
+  border-radius: 90px;
+}
+
 #add-tweet-footer {
   display: flex;
   justify-content: space-around;
+}
+
+.add-tweet-misc-btns {
+  border: none;
+  background: transparent;
 }
 
 /* Feed Section End */
@@ -126,6 +160,7 @@ body {
 
 #right-section {
   display: flex;
+  gap: 20px;
   min-height: 100vh;
   min-width: 34%;
   width: fit-content;
@@ -152,25 +187,33 @@ body {
   padding: 10px 0px;
 }
 
-#right-search input {
+#right-search-input {
+  display: flex;
   background-color: #191b1f;
   color: #71767b;
-  border: none;
   border-radius: 25px;
+  height: 50px;
+  width: 330px;
+  align-items: center;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+#right-search-input input {
+  border: none;
+  background-color: transparent;
   text-indent: 15%;
   height: 50px;
-  min-width: 330px;
-  width: fit-content;
+  color: #71767b;
 }
 
 #right-follow {
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: left;
-  gap: 5px;
   margin: 70px 0px 0px 0px;
-  padding: 15px 0px;
+  padding: 0px 15px;
+  box-sizing: border-box;
   background-color: #191b1f;
   color: #71767b;
   border: none;
@@ -180,11 +223,19 @@ body {
   width: fit-content;
 }
 
+#right-follow p {
+  font-size: 20px;
+  color: #fff;
+}
+
 #right-follow-sugg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #right-follow .user-card {
-  width: 90%;
+  width: 100%;
   background: white;
 }
 
@@ -193,14 +244,14 @@ body {
 /* Utilities */
 .line-vert {
   height: 100vh;
-  width: 1px;
-  background: red;
+  width: 2px;
+  background: #71767b;
 }
 
 .line-hori {
   width: 100%;
-  height: 1px;
-  background: red;
+  height: 2px;
+  background: #71767b;
 }
 
 .blue-btn {
@@ -213,13 +264,17 @@ body {
   font-size: 13px;
   font-weight: 700;
   color: white;
+  border: none;
 }
 
 .user-card {
   min-width: 240px;
-  min-height: 50px;
+  height: 50px;
   margin: 10px 0px;
+  padding-right: 10px;
+  box-sizing: border-box;
   display: flex;
+  align-items: center;
 }
 
 #user-card-pfp {
@@ -229,8 +284,45 @@ body {
   border-radius: 50%;
 }
 
+#user-card-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+  font-size: 14px;
+  color: white;
+}
+
+#user-card-menu {
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#user-fname {
+  font-weight: 600;
+}
+
+#user-uname {
+  color: #71767b;
+}
+
 @media screen {
   @media screen and (max-width: 1200px) {
+    #left-section {
+      width: 21%;
+    }
+
+    #feed,
+    #feed-header {
+      width: 42%;
+    }
+
+    #right-section {
+      min-width: 37%;
+    }
+
     #left-menu {
       padding: 10px 10px;
       min-width: fit-content;
