@@ -6,13 +6,14 @@
     include ("connection.php");
 
     $username = $_POST['username'];
-
+    $password = $_POST['password'];
     $email = $_POST['email'];
     // $dob = date('y-m-d', strtotime($_POST['dob']));
 
-    $stmt = $mysqli -> prepare ("SELECT `users`.`username` , `email` FROM   `users` WHERE (users.username = (?) OR (users.email = (?) );
-    VALUES ( ?, ?);");
-    $stmt -> bind_param("ss", $username , $email);
+    $stmt = $mysqli -> prepare ("SELECT `users`.`username` , users.`email`, users.password
+    FROM   `users` WHERE (users.username = (?) AND (users.email = (?) AND (users.passsword = (?)) );
+    VALUES (?, ?, ?);");
+    $stmt -> bind_param("sss", $username , $email);
     $stmt -> execute();
     $result = $stmt -> get_result();
     $stmt -> close();
