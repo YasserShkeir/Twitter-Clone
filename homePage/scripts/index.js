@@ -1,8 +1,26 @@
 window.onload = () => {
-  let navHome = document.querySelector("nav-home");
-  let navProfile = document.querySelector("nav-profile");
-
   /* Edit Profile Section Start */
+
+  /* EDIT PROFILE BTN START */
+  const editForm = document.querySelector("#editForm");
+  const editBtn = document.querySelector("#edit-button");
+  const closeForm = document.querySelector(".close");
+
+  const openFormTweet = () => {
+    console.log(1111);
+    editForm.style.display = "flex";
+  };
+
+  const closeFormTweet = () => {
+    editForm.style.display = "none";
+  };
+
+  editBtn.addEventListener("click", openFormTweet);
+  closeForm.addEventListener("click", closeFormTweet);
+
+  /* EDIT PROFILE BTN END */
+  const imgChangeBtn = document.querySelector("#changeImage");
+  const changeImage = () => {};
 
   /* Profile Section: Profile Tweet/Media/Likes Buttons */
   const profileNavButtons = document.querySelectorAll(".prof-nav-btn");

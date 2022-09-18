@@ -23,16 +23,18 @@ body {
 
 #left-menu {
   box-sizing: border-box;
+  flex-direction: column;
   height: 100%;
-  position: fixed;
   padding: 10px 0px;
 }
 
 #left-nav {
+  flex-direction: column;
   height: 100%;
 }
 
 #nav-menu {
+  flex-direction: column;
   gap: 30px;
   height: 100%;
   min-width: 240px;
@@ -87,6 +89,122 @@ body {
   width: 225px;
 }
 
+/* From Container Base */
+
+.form {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #aaaaaa;
+  background-color: rgba(9, 84, 135, 0.25);
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Edit Profile BTN */
+
+.modal-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  width: fit-content;
+  height: fit-content;
+}
+
+#edit-acc {
+  padding-left: 30px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: left;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#editInput {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 0px 35px;
+  position: relative;
+}
+
+.editField {
+  position: relative;
+  border: 1px solid gray;
+  height: fit-content;
+  margin: 5px 0px;
+  padding: 0px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.editField:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.editField img {
+  width: 100px;
+  height: 100px;
+}
+
+.editField input {
+  background: none;
+  background-color: transparent;
+  border: none;
+  color: white;
+  height: 40px;
+}
+
+.editField label {
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 10px;
+  transition: 0.2s ease all;
+  font-size: 15px;
+}
+
+.editField input:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+.editField input:focus ~ label {
+  top: 0px;
+  font-size: 12px;
+}
+
+.editField:focus-within {
+  border: 2px solid #1d9bf0;
+}
+
+.editField #editInput input {
+  width: 100%;
+  background-color: transparent;
+}
+
 /* Left Side Section End */
 
 /* Feed Section Start */
@@ -105,7 +223,6 @@ body {
   align-items: center;
   background-color: rgb(0, 0, 0, 0.8);
   color: #fff;
-  position: fixed;
   height: 72px;
   width: 39%;
   box-sizing: border-box;
@@ -120,6 +237,7 @@ body {
 }
 
 #add-tweet {
+  flex-direction: column;
   min-height: fit-content;
   margin-top: 85px;
   margin-bottom: 10px;
@@ -214,7 +332,7 @@ body {
 }
 
 #right-col {
-  position: fixed;
+  flex-direction: column;
   gap: 15px;
   box-sizing: border-box;
   height: 100%;
@@ -228,7 +346,6 @@ body {
   min-width: 330px;
   width: fit-content;
   height: 50px;
-  position: fixed;
   background-color: #000;
   padding: 10px 0px;
 }
@@ -253,6 +370,7 @@ body {
 }
 
 #right-follow {
+  flex-direction: column;
   text-align: left;
   margin: 70px 0px 0px 0px;
   padding: 0px 15px;
@@ -272,6 +390,7 @@ body {
 }
 
 #right-follow-sugg {
+  flex-direction: column;
   align-items: center;
 }
 
@@ -320,6 +439,7 @@ body {
 }
 
 #setup-btn {
+  flex-direction: column;
   justify-content: flex-end;
   height: 85%;
 }
@@ -327,6 +447,7 @@ body {
 #prof-details-txt {
   color: #71767b;
   margin: 10px 10px 20px 5%;
+  flex-direction: column;
   gap: 5px;
   font-size: 16px;
 }
@@ -373,8 +494,8 @@ body {
   display: flex;
 }
 
-.flex-col {
-  flex-direction: column;
+.fixed {
+  position: fixed;
 }
 
 .line-vert {
@@ -494,6 +615,7 @@ body {
     #left-menu {
       padding: 10px 10px;
       min-width: fit-content;
+      position: fixed;
     }
 
     #left-nav {
