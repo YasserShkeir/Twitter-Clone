@@ -1,0 +1,720 @@
+* {
+  font-family: sans-serif;
+}
+
+html {
+  background-color: #000;
+}
+
+body {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Left Side Section Start */
+
+#left-section {
+  width: 27%;
+  height: 100vh;
+  justify-content: flex-end;
+  background-color: #000;
+}
+
+#left-menu {
+  box-sizing: border-box;
+  flex-direction: column;
+  height: 100%;
+  padding: 10px 0px;
+}
+
+#left-nav {
+  flex-direction: column;
+  height: 100%;
+}
+
+#nav-menu {
+  flex-direction: column;
+  gap: 30px;
+  height: 100%;
+  min-width: 240px;
+}
+
+#nav-menu a {
+  width: fit-content;
+  cursor: pointer;
+}
+
+#twitter-icon {
+  height: 60px;
+}
+
+#twitter-icon img {
+  height: 50px;
+  background-color: none;
+}
+
+.nav-menu-item {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  width: fit-content;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 45px;
+  background-color: transparent;
+  border: none;
+  background-color: #71767b;
+}
+
+.nav-menu-item:hover {
+  background-color: #1d9bf0;
+}
+
+.nav-menu-container {
+  width: fit-content;
+  height: 32px;
+  align-items: center;
+  margin-right: 10px;
+  gap: 17px;
+}
+
+.nav-menu-item img {
+  height: 30px;
+  width: 30px;
+}
+
+#nav-button {
+  width: 225px;
+}
+
+/* From Container Base */
+
+.form {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #aaaaaa;
+  background-color: rgba(9, 84, 135, 0.25);
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Edit Profile BTN */
+
+.modal-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  width: fit-content;
+  height: fit-content;
+}
+
+#edit-acc {
+  padding-left: 30px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: left;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#editInput {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 0px 35px;
+  position: relative;
+}
+
+.editField {
+  position: relative;
+  border: 1px solid gray;
+  height: fit-content;
+  margin: 5px 0px;
+  padding: 0px 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.editField:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.editField img {
+  width: 100px;
+  height: 100px;
+}
+
+.editField input {
+  background: none;
+  background-color: transparent;
+  border: none;
+  color: white;
+  height: 40px;
+}
+
+.editField label {
+  position: absolute;
+  pointer-events: none;
+  left: 10px;
+  top: 10px;
+  transition: 0.2s ease all;
+  font-size: 15px;
+}
+
+.editField input:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+.editField input:focus ~ label {
+  top: 0px;
+  font-size: 12px;
+}
+
+.editField:focus-within {
+  border: 2px solid #1d9bf0;
+}
+
+.editField #editInput input {
+  width: 100%;
+  background-color: transparent;
+}
+
+/* Left Side Section End */
+
+/* Feed Section Start */
+
+#feed,
+#editProf {
+  width: 39%;
+  height: 100vh;
+  background-color: #000;
+}
+
+#feed-header {
+  justify-content: space-between;
+  font-size: 3vw;
+  padding: 0px 10px;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.8);
+  color: #fff;
+  height: 72px;
+  width: 39%;
+  box-sizing: border-box;
+}
+
+#feed-header svg {
+  min-height: 30px;
+  height: 3vw;
+}
+
+#add-tweet {
+  flex-direction: column;
+  min-height: fit-content;
+  margin-top: 85px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+#add-tweet-input {
+  gap: 10px;
+  padding: 0px 10px;
+}
+
+#add-tweet-input textarea {
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #fff;
+}
+
+#add-tweet-input img {
+  width: 50px;
+  border-radius: 90px;
+}
+
+#add-tweet-footer {
+  justify-content: space-around;
+}
+
+.add-tweet-misc-btns {
+  border: none;
+  background: transparent;
+}
+.tweet {
+  height: fit-content;
+  box-sizing: border-box;
+  padding: 10px 0px 10px 0px;
+  gap: 10px;
+  color: #fff;
+}
+
+.tweet .tweet-info {
+  padding-left: 12%;
+  box-sizing: border-box;
+}
+
+.tweet-info {
+  align-items: center;
+  color: #71767b;
+  font-size: 14px;
+  gap: 5px;
+}
+
+.tweet-info img {
+  background-color: #71767b;
+  height: 24px;
+  border-radius: 20px;
+}
+
+.tweet .user-card {
+  padding: 0% 5%;
+  box-sizing: border-box;
+}
+
+.tweet-content-text {
+  margin: 5px 5%;
+}
+
+.tweet-content-media {
+  width: 100%;
+  justify-content: center;
+}
+
+.tweet-content-media img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.tweet-footer {
+  justify-content: space-around;
+  margin: 10px;
+  align-items: baseline;
+}
+
+.footer-like:hover {
+  color: red;
+}
+
+.footer-share:hover {
+  cursor: pointer;
+}
+
+/* Feed Section End */
+
+/* Right Side Section Start */
+
+#right-section {
+  gap: 20px;
+  min-height: 100vh;
+  min-width: 34%;
+  width: fit-content;
+  background-color: #000;
+}
+
+#right-col {
+  flex-direction: column;
+  gap: 15px;
+  box-sizing: border-box;
+  height: 100%;
+  width: fit-content;
+  align-content: center;
+  padding-left: 15px;
+}
+
+#right-search {
+  margin: 0px;
+  min-width: 330px;
+  width: fit-content;
+  height: 50px;
+  background-color: #000;
+  padding: 10px 0px;
+}
+
+#right-search-input {
+  background-color: #191b1f;
+  color: #71767b;
+  border-radius: 25px;
+  height: 50px;
+  width: 330px;
+  align-items: center;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+#right-search-input input {
+  border: none;
+  background-color: transparent;
+  text-indent: 15%;
+  height: 50px;
+  color: #71767b;
+}
+
+#right-follow {
+  flex-direction: column;
+  text-align: left;
+  margin: 70px 0px 0px 0px;
+  padding: 0px 15px;
+  box-sizing: border-box;
+  background-color: #191b1f;
+  color: #71767b;
+  border: none;
+  border-radius: 25px;
+  min-height: 500px;
+  min-width: 330px;
+  width: fit-content;
+}
+
+#right-follow p {
+  font-size: 20px;
+  color: #fff;
+}
+
+#right-follow-sugg {
+  flex-direction: column;
+  align-items: center;
+}
+
+#right-follow .user-card {
+  width: 100%;
+}
+
+/* Right Side Section End */
+
+/* Edit Profile Section Start */
+
+#prof-Top-Section {
+  width: 100%;
+  height: 510px;
+  margin-top: 75px;
+}
+
+#prof-details {
+  width: 100%;
+  height: 250px;
+}
+
+#prof-media {
+  background-color: #71767b;
+  height: 180px;
+  justify-content: center;
+}
+
+#prof-media img {
+  height: 100%;
+}
+
+#prof-media-edit {
+  position: absolute;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 0px 4%;
+  height: 130px;
+  margin-top: 110px;
+  width: 39%;
+}
+
+#prof-media-edit img {
+  border-radius: 90px;
+  border: 5px solid #000;
+}
+
+#setup-btn {
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 85%;
+}
+
+#prof-details-txt {
+  color: #71767b;
+  margin: 10px 10px 20px 5%;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 16px;
+}
+
+#prof-details-fname {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+#prof-details-date {
+  margin: 10px 0px;
+}
+
+#following-count,
+#follower-count {
+  color: #fff;
+}
+
+#profile-nav {
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+}
+
+#prof-nav-buttons {
+  height: 45px;
+  width: 85%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prof-nav-btn {
+  cursor: pointer;
+  text-align: center;
+  color: #71767b;
+  width: 70px;
+}
+
+/* Edit Profile Section End */
+
+/* Utilities */
+.flex {
+  display: flex;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.hide {
+  display: none;
+}
+
+.line-vert {
+  height: 100vh;
+  z-index: 10px;
+  position: fixed;
+  width: 2px;
+  background: #71767b;
+}
+
+.line-hori {
+  width: 100%;
+  height: 2px;
+  background: #71767b;
+}
+
+.btn {
+  cursor: pointer;
+  min-height: 34px;
+  min-width: 70px;
+  border-radius: 25px;
+  padding: 1px 5px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.btn-hollow {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.flw-btn {
+  background-color: #fff;
+  cursor: pointer;
+  min-height: 34px;
+  width: 70px;
+  border-radius: 25px;
+  padding: 1px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #71767b;
+  border: none;
+  margin-left: auto;
+}
+
+.blue-btn {
+  background-color: #1d9bf0;
+  cursor: pointer;
+  min-height: 34px;
+  min-width: 70px;
+  border-radius: 25px;
+  padding: 1px;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+  border: none;
+}
+
+.user-card {
+  min-width: 240px;
+  height: 50px;
+  margin: 10px 0px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  display: flex;
+
+  align-items: center;
+}
+
+.user-card-pfp {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  border: 2px solid #1d9bf0;
+}
+
+#user-card-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+  font-size: 14px;
+  color: white;
+}
+
+#user-card-menu {
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#user-fname {
+  font-weight: 600;
+}
+
+#user-uname {
+  color: #71767b;
+}
+
+@media screen {
+  @media screen and (max-width: 1200px) {
+    #left-section {
+      width: 21%;
+    }
+
+    #feed,
+    #feed-header,
+    #editProf {
+      width: 42%;
+    }
+
+    #right-section {
+      min-width: 37%;
+    }
+
+    #left-menu {
+      padding: 10px 10px;
+      min-width: fit-content;
+      position: fixed;
+    }
+
+    #left-nav {
+      align-items: flex-end;
+      min-width: fit-content;
+    }
+
+    #nav-menu {
+      align-items: flex-end;
+      min-width: fit-content;
+    }
+
+    .nav-menu-container p,
+    #left-section #user-card-menu,
+    #left-section #user-card-details {
+      display: none;
+    }
+
+    #nav-button {
+      width: fit-content;
+    }
+
+    .nav-menu-container {
+      margin: 0px;
+    }
+
+    .user-card {
+      min-width: fit-content;
+      justify-content: center;
+      padding-right: 0px;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    #left-section {
+      min-width: 80px;
+      width: 5%;
+    }
+
+    #nav-menu {
+      align-items: center;
+    }
+
+    #feed,
+    #editProf,
+    #prof-media-edit {
+      width: 90vw;
+    }
+
+    #feed-header {
+      width: 85%;
+      font-size: 6vw;
+    }
+
+    #feed-header svg {
+      height: 6vw;
+    }
+
+    #right-section {
+      min-width: auto;
+      width: 2px;
+    }
+
+    #right-col {
+      display: none;
+    }
+
+    .line-vert {
+      display: fixed;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    #feed,
+    #editProf,
+    #prof-media-edit {
+      width: 100%;
+    }
+
+    #feed-header {
+      width: 100%;
+    }
+
+    #left-section {
+      width: 0px;
+      display: none !important;
+    }
+  }
+}
