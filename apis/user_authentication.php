@@ -15,11 +15,12 @@
     VALUES (?, ?, ?);");
     $stmt -> bind_param("sss", $username , $email);
     $stmt -> execute();
-    $result = $stmt -> get_result();
+
     $stmt -> close();
     $mysqli -> close();
+    $response['status'] = 'authorized';
 
-    echo json_encode($result);
+    echo json_encode($response);
 
 ?>
     
