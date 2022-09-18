@@ -2,9 +2,9 @@ window.onload = () => {
   /* LEFT COMPONENT */
   const leftSection = document.querySelector("#left-section");
   let leftSectionContent = `
-  <div id="left-menu" class="flex flex-col">
-    <div id="left-nav" class="flex flex-col">
-      <div id="nav-menu" class="flex flex-col">
+  <div id="left-menu" class="flex fixed">
+    <div id="left-nav" class="flex">
+      <div id="nav-menu" class="flex">
         <a id="twitter-icon" href="/homePage/#">
           <img src="./assets/icons/twitter-icon-white.png" />
         </a>
@@ -33,11 +33,11 @@ window.onload = () => {
     </div>
     <div class="user-card">
       <a href="/homePage/editProfile.html">
-        <img class="user-card-pfp curr-user-pfp" />
+        <img class="user-card-pfp curr-user-pfp" src="${""}" />
       </a>
       <div id="user-card-details">
-        <div id="user-fname">Fname Lname</div>
-        <div id="user-uname">@username</div>
+        <div id="user-fname">${"Fname Lname"}</div>
+        <div id="user-uname">@${"Username"}</div>
       </div>
       <button id="user-card-menu">
         <svg
@@ -60,10 +60,42 @@ window.onload = () => {
   leftSection.innerHTML += leftSectionContent;
 
   /* RIGHT COMPONENT */
+
+  /* Follow Suggesion Card */
+
+  const followSuggSample = [
+    { followSuggName: "11 x1", followSuggUName: "HAH1", followSuggPFP: "" },
+    { followSuggName: "22 x2", followSuggUName: "HAH2", followSuggPFP: "" },
+    { followSuggName: "33 x3", followSuggUName: "HAH3", followSuggPFP: "" },
+    { followSuggName: "44 x4", followSuggUName: "HAH4", followSuggPFP: "" },
+    { followSuggName: "55 x5", followSuggUName: "HAH5", followSuggPFP: "" },
+    { followSuggName: "66 x6", followSuggUName: "HAH6", followSuggPFP: "" },
+  ];
+
+  let followSuggestions = ``;
+
+  const followSuggestionUsers = () => {
+    for (user of followSuggSample) {
+      followSuggestions += `<div id="right-follow-sugg" class="flex">
+      <div class="user-card">
+        <a href="/homePage/editProfile.html">
+          <img class="user-card-pfp curr-user-pfp" src="${""}" />
+        </a>
+        <div id="user-card-details">
+          <div id="user-fname">${user.followSuggName}</div>
+          <div id="user-uname">@${user.followSuggUName}</div>
+        </div>
+        <button class="flw-btn">Follow</button>
+      </div>
+    </div>`;
+    }
+    return followSuggestions;
+  };
+
   const rightSection = document.querySelector("#right-section");
   let rightSectionContent = `
   <div class="line-vert"></div>
-  <div id="right-col" class="flex flex-col fixed">
+  <div id="right-col" class="flex fixed">
     <div id="right-search" class="fixed">
       <div id="right-search-input" class="flex">
         <svg
@@ -92,20 +124,10 @@ window.onload = () => {
         <input type="search" placeholder="Search Twitter" name="search" />
       </div>
     </div>
-    <div id="right-follow" class="flex flex-col">
+    <div id="right-follow" class="flex">
       <p>Who to follow</p>
-      <div id="right-follow-sugg" class="flex flex-col">
-        <div class="user-card">
-          <a href="/homePage/editProfile.html">
-            <img class="user-card-pfp" />
-          </a>
-          <div id="user-card-details">
-            <div id="user-fname">Fname Lname</div>
-            <div id="user-uname">@username</div>
-          </div>
-          <button class="flw-btn">Follow</button>
-        </div>
-      </div>
+      ${followSuggestionUsers()}
+      
     </div>
   </div>`;
 
@@ -124,28 +146,24 @@ window.onload = () => {
   const dummyUserPFP = document.querySelectorAll(".curr-user-pfp");
   let currentUserPFP = currentUser.pfp;
 
-  console.log(dummyUserPFP);
   dummyUserPFP.forEach((item) => {
     item.src = currentUserPFP;
   });
 
   const image_input = document.querySelector("#changeImage");
-
-  image_input.addEventListener("change", function () {
-    const reader = new FileReader();
-    reader.addEventListener("load", () => {
-      const uploaded_image = reader.result;
-      console.log(uploaded_image);
-      debugger;
-      currentUser.pfp = uploaded_image;
-      console.log(currentUser.pfp);
-      debugger;
-      dummyUserPFP.forEach((item) => {
-        item.src = currentUser.pfp;
+  if (image_input) {
+    image_input.addEventListener("change", function () {
+      const reader = new FileReader();
+      reader.addEventListener("load", () => {
+        const uploaded_image = reader.result;
+        currentUser.pfp = uploaded_image;
+        dummyUserPFP.forEach((item) => {
+          item.src = currentUser.pfp;
+        });
       });
+      reader.readAsDataURL(this.files[0]);
     });
-    reader.readAsDataURL(this.files[0]);
-  });
+  }
 
   /* USER MANAGEMENT END */
 
@@ -165,42 +183,49 @@ window.onload = () => {
     editForm.style.display = "none";
   };
 
-  editBtn.addEventListener("click", openFormTweet);
-  closeForm.addEventListener("click", closeFormTweet);
+  if (editBtn) {
+    editBtn.addEventListener("click", openFormTweet);
+  }
+
+  if (closeForm) {
+    closeForm.addEventListener("click", closeFormTweet);
+  }
 
   /* EDIT PROFILE BTN END */
 
   /* Profile Section: Profile Tweet/Media/Likes Buttons */
   const profileNavButtons = document.querySelectorAll(".prof-nav-btn");
   /* Initial State */
-  profileNavButtons[0].style.fontWeight = "600";
-  profileNavButtons[0].style.color = "#fff";
-  profileNavButtons[0].style.borderBottom = "5px solid #1d9bf0";
+  if (profileNavButtons[0]) {
+    profileNavButtons[0].style.fontWeight = "600";
+    profileNavButtons[0].style.color = "#fff";
+    profileNavButtons[0].style.borderBottom = "5px solid #1d9bf0";
 
-  profileNavButtons.forEach((item) => {
-    item.addEventListener("click", (event) => {
-      /* Reset styling to original */
-      profileNavButtons.forEach((item) => {
-        item.style.border = "none";
-        item.style.color = "#71767b";
-        item.style.fontWeight = "400";
+    profileNavButtons.forEach((item) => {
+      item.addEventListener("click", (event) => {
+        /* Reset styling to original */
+        profileNavButtons.forEach((item) => {
+          item.style.border = "none";
+          item.style.color = "#71767b";
+          item.style.fontWeight = "400";
+        });
+        /* Apply styling to chosen tab */
+        item.style.fontWeight = "600";
+        item.style.color = "#fff";
+        item.style.borderBottom = "5px solid #1d9bf0";
+
+        if (item === profileNavButtons[0]) {
+          console.log("Tweets Section");
+        }
+        if (item === profileNavButtons[1]) {
+          console.log("Media Section");
+        }
+        if (item === profileNavButtons[2]) {
+          console.log("Likes Section");
+        }
       });
-      /* Apply styling to chosen tab */
-      item.style.fontWeight = "600";
-      item.style.color = "#fff";
-      item.style.borderBottom = "5px solid #1d9bf0";
-
-      if (item === profileNavButtons[0]) {
-        console.log("Tweets Section");
-      }
-      if (item === profileNavButtons[1]) {
-        console.log("Media Section");
-      }
-      if (item === profileNavButtons[2]) {
-        console.log("Likes Section");
-      }
     });
-  });
+  }
 
   /* Edit Profile Section End */
 };

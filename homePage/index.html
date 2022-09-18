@@ -29,13 +29,16 @@
           </defs>
         </svg>
       </div>
-      <div id="add-tweet" class="flex flex-col">
+      <div id="add-tweet" class="flex">
         <div id="add-tweet-input" class="flex">
           <a href="/homePage/editProfile.html"
             ><img class="user-card-pfp curr-user-pfp"
           /></a>
-
-          <input type="text" id="tweet-add-content" />
+          <textarea
+            id="tweet-add-content"
+            maxlength="255"
+            placeholder="What's Happening?"
+          ></textarea>
         </div>
         <div id="add-tweet-footer" class="flex">
           <div id="add-tweet-misc">
@@ -82,7 +85,7 @@
               </svg>
             </button>
           </div>
-          <button id="add-tweet-button" class="blue-btn">Tweet</button>
+          <button class="blue-btn add-tweet-button">Tweet</button>
         </div>
       </div>
       <div class="line-hori"></div>
@@ -95,7 +98,7 @@
           followed by <span id="followed-by"> Yasser Shkeir</span>
         </div>
         <div class="user-card">
-          <img id="user-card-pfp" />
+          <img class="user-card-pfp curr-user-pfp" />
           <div id="user-card-details">
             <div id="user-fname">Fname Lname</div>
             <div id="user-uname">@username</div>
@@ -142,7 +145,7 @@
           followed by <span id="followed-by"> Yasser Shkeir</span>
         </div>
         <div class="user-card">
-          <img id="user-card-pfp" />
+          <img class="user-card-pfp curr-user-pfp" />
           <div id="user-card-details">
             <div id="user-fname">Fname Lname</div>
             <div id="user-uname">@username</div>

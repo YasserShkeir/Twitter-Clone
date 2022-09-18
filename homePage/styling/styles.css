@@ -246,6 +246,15 @@ body {
   padding: 0px 10px;
 }
 
+#add-tweet-input textarea {
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #fff;
+}
+
 #add-tweet-input img {
   width: 50px;
   border-radius: 90px;
