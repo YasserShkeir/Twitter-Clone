@@ -35,7 +35,6 @@ body {
   justify-content: center;
   align-content: center;
   flex-shrink: 2;
-
   background-image: url("../images/lohp_en_1302x955.png");
   background-size: cover;
   background-position: center;
@@ -84,13 +83,13 @@ body {
   margin: 10px 0px;
 }
 
-#signup {
+.blue-btn {
   font-size: 15px;
   color: white;
 
   width: 300px;
   height: 40px;
-  margin: 80px 0px 10px 0px;
+  margin: 10px 0px 10px 0px;
 
   border: none;
   border-radius: 40px;
@@ -100,9 +99,13 @@ body {
   transition: 0.3s;
 }
 
-#signup:hover {
+.blue-btn:hover {
   transition: 0.3s;
   background-color: #1b74b0;
+}
+
+#signUp {
+  margin: 60px 0px 10px 0px;
 }
 
 #right #caption {
@@ -154,12 +157,13 @@ body {
   width: 600px;
   max-width: 80vw;
   min-height: 400px;
-  height: 650px;
+  height: fit-content;
   max-height: 90vh;
 }
 
 #create-acc {
   padding-left: 30px;
+  font-size: 20px;
 }
 
 /* The Close Button */
@@ -168,6 +172,7 @@ body {
   float: left;
   font-size: 28px;
   font-weight: bold;
+  width: fit-content;
 }
 
 .close:hover,
@@ -200,6 +205,10 @@ body {
   border: none;
   color: white;
   height: 40px;
+  width: 100%;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
 }
 
 .signupField label {
