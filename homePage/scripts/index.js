@@ -203,20 +203,23 @@ window.onload = () => {
   });
 
   /* Edit Profile Section End */
-  let username = document.getElementById('username')
-  let tweets =[]
-
-  fetch("http://localhost:8080/apis/fetch_tweets.php",  {
-
-    method: "POST",
-    body: new URLSearchParams({
-      "username": username,
-    })
-  }).then(response => response.json())
-    .then(data => {
-      for(d in data){
-
-      }
-    })
-    .catch(err => console.log(err));
+  function get_tweets(){
+    let username = document.getElementById('username')
+    let tweets =[]
+  
+    fetch("http://localhost:8080/apis/fetch_tweets.php",  {
+  
+      method: "POST",
+      body: new URLSearchParams({
+        "username": username,
+      })
+    }).then(response => response.json())
+      .then(data => {
+        for(d in data){
+  
+        }
+      })
+      .catch(err => console.log(err));
+  }
+ 
 };
