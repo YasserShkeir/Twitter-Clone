@@ -229,7 +229,9 @@ window.onload = () => {
     return tweetLineup;
   };
 
-  feed.innerHTML += tweetFeed();
+  if (feed) {
+    feed.innerHTML += tweetFeed();
+  }
 
   /* USER MANAGEMENT START */
 
