@@ -6,7 +6,7 @@
     include ("connection.php");
 
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = hash('sha256'), $_POST['password']);
     $email = $_POST['email'];
     // $dob = date('y-m-d', strtotime($_POST['dob']));
 
