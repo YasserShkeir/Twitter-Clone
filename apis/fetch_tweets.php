@@ -6,7 +6,7 @@
     include ("connection.php");
 
     $username = $_POST['username'];
-    $password = hash('256', $_POST['password'];
+
     // $dob = date('y-m-d', strtotime($_POST['dob']));
 
     $stmt = $mysqli -> prepare ("SELECT tweets.content, tweets.likes
