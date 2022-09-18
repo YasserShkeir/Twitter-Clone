@@ -62,10 +62,6 @@
                 <label>Email</label>
               </div>
               <div class="signupField">
-                <input id="phone" type="tel" name="phone" />
-                <label>Phone</label>
-              </div>
-              <div class="signupField">
                 <input id="dob" type="date" name="dob" />
                 <label>Date of Birth</label>
               </div>
@@ -84,7 +80,37 @@
           including <a href="#">Cookie Use</a>.
         </div>
         <p id="ask" class="font-500">Already have an account?</p>
-        <button class="blue-btn myBtn font-500" onclick="">Sign in</button>
+
+        <!-- SIGN IN -->
+        <button id="signIn" class="blue-btn myBtn font-500" onclick="">
+          Sign in
+        </button>
+
+        <div id="signInModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="signIn-acc" class="font-600">Sign In to your account</p>
+            <form id="signInInput" class="font-500">
+              <div id="signIn-usernameField" class="signupField">
+                <input id="signIn-username" type="text" name="username" />
+                <label>Username</label>
+              </div>
+              <div class="signupField">
+                <input id="signIn-email" type="email" name="email" />
+                <label>Email</label>
+              </div>
+              <div class="signupField">
+                <input id="signIn-password" type="password" name="password" />
+                <label>Password</label>
+              </div>
+
+              <button id="signInSubmit" class="blue-btn font-600" type="submit">
+                Sign In
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
       <!-- Right Section End -->
     </div>

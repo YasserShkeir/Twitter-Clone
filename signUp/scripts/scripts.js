@@ -99,4 +99,40 @@ window.onload = async function () {
       .catch((err) => console.log(err));
     console.log("submit");
   });
+
+  // *************
+  // SIGN IN MODEL
+  let signInModal = document.getElementById("signInModal");
+
+  let signInBtn = document.getElementById("signIn");
+
+  let signInSpan = document.getElementsByClassName("close")[1];
+
+  signInBtn.onclick = function () {
+    signInModal.style.display = "flex";
+  };
+
+  signInSpan.onclick = function () {
+    signInModal.style.display = "none";
+  };
+
+  document.getElementById("signInSubmit").addEventListener("click", () => {
+    let username = document.getElementById("signIn-username").value;
+    let password = document.getElementById("signIn-password").value;
+    let email = document.getElementById("signIn-email").value;
+
+    console.log(username, password, email, dob);
+    fetch("http://localhost:8080/apis/signUp.php", {
+      method: "POST",
+      body: new URLSearchParams({
+        username: username,
+        password: password,
+        email: email,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((err) => console.log(err));
+    console.log("submit");
+  });
 };

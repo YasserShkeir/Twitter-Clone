@@ -161,7 +161,8 @@ body {
   max-height: 90vh;
 }
 
-#create-acc {
+#create-acc,
+#signIn-acc {
   padding-left: 30px;
   font-size: 20px;
 }
@@ -182,7 +183,8 @@ body {
   cursor: pointer;
 }
 
-#signupInput {
+#signupInput,
+#signInInput {
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -234,7 +236,8 @@ body {
   border: 2px solid #1d9bf0;
 }
 
-.signupField #signupInput input {
+.signupField #signupInput input,
+.signInField #signInInput input {
   width: 100%;
   background-color: transparent;
 }
