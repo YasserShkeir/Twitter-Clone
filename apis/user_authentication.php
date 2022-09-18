@@ -18,9 +18,10 @@
 
     $stmt -> close();
     $mysqli -> close();
-    $response['status'] = 'authorized';
+    $result = $stmt -> get_result()
 
-    echo json_encode($response);
+    $result_json =  json_encode($result);
+    
 
 ?>
     
