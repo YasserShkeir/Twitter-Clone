@@ -268,11 +268,10 @@ body {
   border: none;
   background: transparent;
 }
-
 .tweet {
   height: fit-content;
   box-sizing: border-box;
-  padding: 25px 0px 10px 0px;
+  padding: 10px 0px 10px 0px;
   gap: 10px;
   color: #fff;
 }
@@ -325,6 +324,7 @@ body {
 }
 
 .footer-share:hover {
+  cursor: pointer;
 }
 
 /* Feed Section End */
@@ -504,6 +504,10 @@ body {
 
 .fixed {
   position: fixed;
+}
+
+.hide {
+  display: none;
 }
 
 .line-vert {
