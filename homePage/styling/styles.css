@@ -218,7 +218,7 @@ body {
 
 #feed-header {
   justify-content: space-between;
-  font-size: 18px;
+  font-size: 3vw;
   padding: 0px 10px;
   align-items: center;
   background-color: rgb(0, 0, 0, 0.8);
@@ -228,11 +228,8 @@ body {
   box-sizing: border-box;
 }
 
-#feed-header p {
-  font-size: 3vw;
-}
-
 #feed-header svg {
+  min-height: 30px;
   height: 3vw;
 }
 
@@ -311,12 +308,14 @@ body {
 .tweet-footer {
   justify-content: space-around;
   margin: 10px;
+  align-items: baseline;
 }
 
-.footer-like {
+.footer-like:hover {
+  color: red;
 }
 
-.footer-share {
+.footer-share:hover {
 }
 
 /* Feed Section End */
@@ -532,13 +531,14 @@ body {
   background-color: #fff;
   cursor: pointer;
   min-height: 34px;
-  min-width: 70px;
+  width: 70px;
   border-radius: 25px;
   padding: 1px;
   font-size: 13px;
   font-weight: 700;
   color: #71767b;
   border: none;
+  margin-left: auto;
 }
 
 .blue-btn {
@@ -565,7 +565,7 @@ body {
   align-items: center;
 }
 
-#user-card-pfp {
+.user-card-pfp {
   height: 50px;
   width: 50px;
   border-radius: 100%;
@@ -667,9 +667,6 @@ body {
 
     #feed-header {
       width: 85%;
-    }
-
-    #feed-header p {
       font-size: 6vw;
     }
 

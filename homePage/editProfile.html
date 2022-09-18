@@ -41,7 +41,9 @@
         </div>
         <div class="user-card">
           <a href="/homePage/editProfile.html">
-            <img id="user-card-pfp" />
+            <img
+              class="user-card-pfp curr-user-pfp"
+            />
           </a>
           <div id="user-card-details">
             <div id="user-fname">Fname Lname</div>
@@ -68,8 +70,25 @@
 
     <section id="editProf">
       <div id="feed-header" class="flex fixed">
-        <div>dssd</div>
-
+        <div>
+            <a href="/homePage/#">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11 5L4 12L11 19M4 12H20"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg></a>
+        </div>
+        
         <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_136_904)">
             <path
@@ -88,13 +107,13 @@
         <div id="prof-details">
           <div id="prof-media" class="flex">
             <img
-              src="./assets/icons/default_profile_400x400.png"
               alt="Profile Cover Image"
+              class="curr-user-pfp"
             />
             <div id="prof-media-edit" class="flex">
               <img
-                src="./assets/icons/default_profile_400x400.png"
                 alt="Profile Cover Image"
+                class="curr-user-pfp"
               />
               <div id="setup-btn" class="flex flex-col">
                 <button id="edit-button" class="btn btn-hollow">
@@ -111,12 +130,12 @@
                     <form id="editInput">
                       <div class="editField">
                         <img src="./assets/icons/default_profile_400x400.png" />
-                        <button
-                          type="button"
-                          id="changeImage"
-                          class="blue-btn"
-                          onclick="changeImage()"
-                        >
+                          <input
+                            type="file"
+                            id="changeImage"
+                            accept="image/jpeg, image/png, image/jpg"
+                            
+                          />
                           <svg
                             width="24"
                             height="24"
@@ -149,19 +168,26 @@
                         </button>
                       </div>
                       <div class="editField">
-                        <input id="password" type="password" name="password" />
+                        <input id="editedName" type="text" />
+                        <label>Name</label>
+                      </div>
+                      <div class="editField">
+                        <input
+                          id="editedPassword"
+                          type="password"
+                        />
                         <label>Password</label>
                       </div>
                       <div class="editField">
-                        <input id="email" type="email" name="email" />
+                        <input id="editedEmail" type="email"/>
                         <label>Email</label>
                       </div>
                       <div class="editField">
-                        <input id="phone" type="tel" name="phone" />
+                        <input id="editedPhone" type="tel" />
                         <label>Phone</label>
                       </div>
                       <div class="editField">
-                        <input id="dob" type="date" name="dob" />
+                        <input id="editedDob" type="date" />
                         <label>Date of Birth</label>
                       </div>
                       <button id="submit" type="submit" class="blue-btn">
@@ -221,6 +247,7 @@
         <div id="right-search" class="fixed">
           <div id="right-search-input" class="flex">
             <svg
+              onclick="search()"
               width="20"
               height="20"
               viewBox="0 0 20 20"
@@ -242,24 +269,21 @@
               </defs>
             </svg>
 
-            <input
-              type="search"
-              placeholder="Search Twitter"
-              name="search"
-              onclick="searchInput()"
-            />
+            <input type="search" placeholder="Search Twitter" name="search" />
           </div>
         </div>
         <div id="right-follow" class="flex flex-col">
           <p>Who to follow</p>
           <div id="right-follow-sugg" class="flex flex-col">
             <div class="user-card">
-              <img id="user-card-pfp" />
+              <a href="/homePage/editProfile.html">
+                <img class="user-card-pfp" />
+              </a>
               <div id="user-card-details">
                 <div id="user-fname">Fname Lname</div>
                 <div id="user-uname">@username</div>
               </div>
-              <button class="flw-btn"></button>
+              <button class="flw-btn">Follow</button>
             </div>
           </div>
         </div>

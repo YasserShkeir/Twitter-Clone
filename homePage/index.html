@@ -41,7 +41,7 @@
         </div>
         <div class="user-card">
           <a href="/homePage/editProfile.html">
-            <img id="user-card-pfp" />
+            <img class="user-card-pfp curr-user-pfp" />
           </a>
           <div id="user-card-details">
             <div id="user-fname">Fname Lname</div>
@@ -67,8 +67,9 @@
     </section>
 
     <section id="feed">
-      <div id="feed-header" class="flex">
-        <p>Home</p>
+      <div id="feed-header" class="flex fixed">
+        <div>Home</div>
+
         <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_136_904)">
             <path
@@ -85,7 +86,10 @@
       </div>
       <div id="add-tweet" class="flex flex-col">
         <div id="add-tweet-input" class="flex">
-          <img src="./assets/icons/default_profile_400x400.png" />
+          <a href="/homePage/editProfile.html"
+            ><img class="user-card-pfp curr-user-pfp"
+          /></a>
+
           <p></p>
         </div>
         <div id="add-tweet-footer" class="flex">
@@ -235,10 +239,11 @@
 
     <section id="right-section" class="flex">
       <div class="line-vert"></div>
-      <div id="right-col" class="flex flex-col">
-        <div id="right-search">
+      <div id="right-col" class="flex flex-col fixed">
+        <div id="right-search" class="fixed">
           <div id="right-search-input" class="flex">
             <svg
+              onclick="search()"
               width="20"
               height="20"
               viewBox="0 0 20 20"
@@ -260,24 +265,21 @@
               </defs>
             </svg>
 
-            <input
-              type="search"
-              placeholder="Search Twitter"
-              name="search"
-              onclick="searchInput()"
-            />
+            <input type="search" placeholder="Search Twitter" name="search" />
           </div>
         </div>
         <div id="right-follow" class="flex flex-col">
           <p>Who to follow</p>
           <div id="right-follow-sugg" class="flex flex-col">
             <div class="user-card">
-              <img id="user-card-pfp" />
+              <a href="/homePage/editProfile.html">
+                <img id="user-card-pfp" />
+              </a>
               <div id="user-card-details">
                 <div id="user-fname">Fname Lname</div>
                 <div id="user-uname">@username</div>
               </div>
-              <button class="flw-btn"></button>
+              <button class="flw-btn">Follow</button>
             </div>
           </div>
         </div>

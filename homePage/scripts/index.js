@@ -1,4 +1,42 @@
 window.onload = () => {
+  /* USER MANAGEMENT START */
+
+  /* Profile Pic: */
+  const currentUser = {
+    name: "Fname Lname",
+    pfp: "./assets/currentUser/pfp.png",
+  };
+
+  window.localStorage.setItem("currentUser", JSON.stringify(currentUser));
+
+  const dummyUserPFP = document.querySelectorAll(".curr-user-pfp");
+  let currentUserPFP = currentUser.pfp;
+
+  console.log(dummyUserPFP);
+  dummyUserPFP.forEach((item) => {
+    item.src = currentUserPFP;
+  });
+
+  const image_input = document.querySelector("#changeImage");
+
+  image_input.addEventListener("change", function () {
+    const reader = new FileReader();
+    reader.addEventListener("load", () => {
+      const uploaded_image = reader.result;
+      console.log(uploaded_image);
+      debugger;
+      currentUser.pfp = uploaded_image;
+      console.log(currentUser.pfp);
+      debugger;
+      dummyUserPFP.forEach((item) => {
+        item.src = currentUser.pfp;
+      });
+    });
+    reader.readAsDataURL(this.files[0]);
+  });
+
+  /* USER MANAGEMENT END */
+
   /* Edit Profile Section Start */
 
   /* EDIT PROFILE BTN START */
@@ -19,8 +57,6 @@ window.onload = () => {
   closeForm.addEventListener("click", closeFormTweet);
 
   /* EDIT PROFILE BTN END */
-  const imgChangeBtn = document.querySelector("#changeImage");
-  const changeImage = () => {};
 
   /* Profile Section: Profile Tweet/Media/Likes Buttons */
   const profileNavButtons = document.querySelectorAll(".prof-nav-btn");
@@ -43,7 +79,13 @@ window.onload = () => {
       item.style.borderBottom = "5px solid #1d9bf0";
 
       if (item === profileNavButtons[0]) {
-        console.log(111);
+        console.log("Tweets Section");
+      }
+      if (item === profileNavButtons[1]) {
+        console.log("Media Section");
+      }
+      if (item === profileNavButtons[2]) {
+        console.log("Likes Section");
       }
     });
   });
