@@ -14,7 +14,7 @@
     VALUES ( ?, ?);");
     $stmt -> bind_param("ss", $username , $email);
     $stmt -> execute();
-    $ result = $stmt -> get_result();
+    $result = $stmt -> get_result();
     $stmt -> close();
     $mysqli -> close();
 
