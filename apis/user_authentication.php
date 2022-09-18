@@ -6,20 +6,19 @@
     include ("connection.php");
 
     $username = $_POST['username'];
-    $password = hash("sha256", $_POST['password']);
+
     $email = $_POST['email'];
     // $dob = date('y-m-d', strtotime($_POST['dob']));
 
-    $stmt = $mysqli -> prepare ("INSERT INTO `users` (`username`, `password`, `email`) 
-    VALUES ( ?, ?, ?);");
-    $stmt -> bind_param("sss",$username, $password, $email);
+    $stmt = $mysqli -> prepare ("SELECT `users`.`username` , `email` FROM   `users` () WHERE (users.username = (?) OR (users.email = (?) );
+    VALUES ( ?, ?);");
+    $stmt -> bind_param("ss", $username , $email);
     $stmt -> execute();
+    $ result = $stmt -> get_result();
     $stmt -> close();
     $mysqli -> close();
 
-
-    $response["status"] = "sucesss";
-    echo json_encode($response);
+    echo json_encode($result);
 
 ?>
     
