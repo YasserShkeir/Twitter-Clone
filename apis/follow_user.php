@@ -6,19 +6,16 @@
     include ("connection.php");
 
     $username = $_POST['username'];
-
-    $email = $_POST['email'];
+    $followed_user = $_POST['followed_username']
     // $dob = date('y-m-d', strtotime($_POST['dob']));
 
-    $stmt = $mysqli -> prepare ("SELECT `users`.`username` , `email` FROM   `users` WHERE (users.username = (?) OR (users.email = (?) );
+    $stmt = $mysqli -> prepare ("INSERT INTO `followed` (`username`, `followed_user`) 
     VALUES ( ?, ?);");
-    $stmt -> bind_param("ss", $username , $email);
+    $stmt -> bind_param("ss",$username, $followed_user);
     $stmt -> execute();
-    $result = $stmt -> get_result();
     $stmt -> close();
     $mysqli -> close();
 
-    echo json_encode($result);
 
-?>
-    
+    $response["status"] = "sucesss";
+    echo json_encode($response);
