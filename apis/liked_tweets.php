@@ -6,22 +6,18 @@
     include ("connection.php");
 
     $username = $_POST['username'];
-    $password = hash('256', $_POST['password'];
-    // $dob = date('y-m-d', strtotime($_POST['dob']));
 
     $stmt = $mysqli -> prepare ("SELECT tweets.content, tweets.likes
     FROM tweets
-    INNER JOIN followed_users
-    ON tweets.users_username = followed_users.users_username
-    WHERE (`folllowed`.users_username = (?));");
-    $stmt -> bind_param("s",$username );
+    WHERE (`tweets`.likes_users_username = (?));");
+    $stmt -> bind_param("s",$username);
     $stmt -> execute();
 
     $result = $stmt -> get_result();
 
     echo json_encode($result);
     $stmt -> close();
-    $mysqli -> close()l;
+    $mysqli -> close();
+
 
 ?>
-    
